@@ -1,0 +1,103 @@
+/* General page styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    background-color: #f5f1ff;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+/* Flexbox navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    background-color: #2d123f;
+    padding: 18px;
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navigation hover effect */
+nav a:hover {
+    color: #d7b6ff;
+    text-decoration: underline;
+}
+
+/* Main content box */
+main {
+    width: 80%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Headings */
+h1 {
+    color: #2d123f;
+    text-align: center;
+    font-size: 36px;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+}
+
+/* Form labels */
+label {
+    font-weight: bold;
+}
+
+/* Inputs and textareas */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #b68cff;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+/* Submit buttons */
+input[type="submit"] {
+    background-color: #5c2d91;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    font-size: 17px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* Submit button hover */
+input[type="submit"]:hover {
+    background-color: #3f1d66;
+}
+
+/* Image styling */
+.hero-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+/* Small helper text */
+.description-text {
+    text-align: center;
+    color: #555;
+}
