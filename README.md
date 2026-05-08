@@ -33,3 +33,5 @@ BUSINESS RULES:
 16. Each REPOST must be made by exactly one USER and must apply to exactly one PLAYLIST.
 17. A PLAYLIST may be reposted any number of times.
 18. Each REPOST must belong to exactly one PLAYLIST." 
+
+<img width="1193" height="314" alt="erd" src="https://github.com/user-attachments/assets/4601a7ef-1e53-4c99-b21e-eca170c13b1b" />
