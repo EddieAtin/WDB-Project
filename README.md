@@ -18,3 +18,30 @@ for the user to have. They should also be able to edit their own playslists when
 <img width="478" height="475" alt="business-rules" src="https://github.com/user-attachments/assets/906e8aa0-1374-44ac-b974-9d4f2494b474" />
 
 <img width="1193" height="314" alt="erd" src="https://github.com/user-attachments/assets/4601a7ef-1e53-4c99-b21e-eca170c13b1b" />
+## Entities
+
+The main entities for this project are:
+
+- USER
+- PLAYLIST
+- SONG
+- TAG
+- PLAYLIST_TAG
+- LIKE
+- SAVE
+- REPOST
+
+## Business Rules 
+The relationship diagram shows how the main tables in the database connect to each other using primary keys and foreign keys. In this project, the User table connects to playlists, likes, saves, and reposts through user_id. The Playlist table connects to songs, tags, likes, saves, and reposts through playlist_id. This diagram helps show how user accounts, playlist posts, song links, and user interactions work together in the database.
+
+![Business Rules](images/business-rules.png)
+
+## ERD
+The ERD shows the overall database design for the unified music playlist sharing platform. It includes the main entities, such as User, Playlist, Song, Tag, Like, Save, and Repost, along with their attributes and cardinalities. The ERD helps explain the structure of the website by showing what information needs to be stored and how each part of the system is related.
+
+![ERD Diagram](images/erd.png)
+
+## Relations Diagram
+The relationship diagram shows how the main tables in the database connect to each other using primary keys and foreign keys. In this project, the User table connects to playlists, likes, saves, and reposts through user_id. The Playlist table connects to songs, tags, likes, saves, and reposts through playlist_id. This diagram helps show how user accounts, playlist posts, song links, and user interactions work together in the database.
+
+![Relations Diagram](images/relations.png)
