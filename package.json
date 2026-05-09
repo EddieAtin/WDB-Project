@@ -2,23 +2,25 @@
   "name": "wdp-project",
   "version": "1.0.0",
   "description": "My website is a unifed music playlist sharing network platform\r with the context that there is a ton of music in the world and online so there a ton of websites \r where you can realease and stream music online however not all musical artists post all of their \r music on the same websites or platforms. Even though big artists will release their music on \r almost every platform, especially Spotify and Youtube, many small and underground artists don't \r release their entire discography on these websites for personal, anticorporate, or financial \r reasons. If you love an artist or a genre of music, its not always easy to discover more the \r said topic. Thats why on this website, users of all ages can create and share playlists of music \r with links directly to the song on any platform it was released on. The idea is to have playlists\r of links so that users can discover and explore more music that may not be on the platform they\r tend to use daily.",
-  "main": "playlist.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/EddieAtin/WDB-Project.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
+  "main": "index.js",
   "bugs": {
     "url": "https://github.com/EddieAtin/WDB-Project/issues"
   },
-  "homepage": "https://github.com/EddieAtin/WDB-Project#readme",
+  "scripts": {
+    "dev.": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "dependencies": {
-    "bcrypt": "^6.0.0"
+    "bcrypt": "^6.0.0",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Playlist | Unified Playlist Network</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <nav>
+        <a href="register.html">Register</a>
+        <a href="login.html">Login</a>
+        <a href="post.html">Post Playlist</a>
+    </nav>
+
+    <main>
+        <img src="images/music.jpg" alt="Music playlist image" class="hero-image">
+
+        <h1>Share a Playlist</h1>
+
+        <p class="description-text">
+            Create a playlist using song links from Spotify, YouTube, SoundCloud, Bandcamp, or any other music platform.
+        </p>
+
+        <form id="playlistForm">
+            <label for="title">Playlist Title:</label><br>
+            <input type="text" id="title" name="title"><br><br>
+
+            <label for="description">Playlist Description:</label><br>
+            <textarea id="description" name="description" rows="4" cols="40"
+            placeholder="Describe the theme, mood, genre, or purpose of the playlist..."></textarea><br><br>
+
+            <label for="tags">Tags:</label><br>
+            <input type="text" id="tags" name="tags"
+            placeholder="Example: indie, underground rap, sad, energetic, rock"><br><br>
+
+            <label for="songs">Song Links from Any Platform:</label><br>
+            <textarea id="songs" name="songs" rows="8" cols="40"
+            placeholder="Paste song links here..."></textarea><br><br>
+
+            <input type="submit" value="Post Playlist">
+        </form>
+    </main>
+
+    <script src="scripts/playlist.js"></script>
+</body>
+</html>
