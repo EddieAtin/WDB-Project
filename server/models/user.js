@@ -51,6 +51,7 @@ async function getUserByEmail(email) {
     return cUser[0];
 }
 
+// READ all users
 async function getAllUsers() {
     let sql = `
         SELECT * FROM users;
@@ -59,15 +60,19 @@ async function getAllUsers() {
     return await con.query(sql);
 }
 
-/*
-{
-    firstName: "Edward",
-    lastName: "Atristain",
-    username: "atristae",
-    email: "eatristain@example.com",
-    password: "password123"
+// READ one user by ID
+async function getUserById(user_id) {
+    let sql = `
+        SELECT * FROM users
+        WHERE user_id = ?;
+    `;
+
+    let user = await con.query(sql, [user_id]);
+    return user[0];
 }
-*/
+
+
+// CREATE user / register
 async function register(user) {
     let cUser = await getUserByEmail(user.email);
 
@@ -93,8 +98,41 @@ async function register(user) {
     return await login(user);
 }
 
+
+// UPDATE user
+async function updateUser(user_id, user) {
+    let sql = `
+        UPDATE users
+        SET first_name = ?, last_name = ?, username = ?, email = ?
+        WHERE user_id = ?;
+    `;
+
+    await con.query(sql, [
+        user.firstName,
+        user.lastName,
+        user.username,
+        user.email,
+        user_id
+    ]);
+
+    return await getUserById(user_id);
+}
+
+// DELETE user
+async function deleteUser(user_id) {
+    let sql = `
+        DELETE FROM users
+        WHERE user_id = ?;
+    `;
+
+    return await con.query(sql, [user_id]);
+}
+
 module.exports = {
     getAllUsers,
+    getUserById,
     login,
-    register
+    register,
+    updateUser,
+    deleteUser
 };

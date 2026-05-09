@@ -29,6 +29,7 @@ createPlaylistTable();
     description: "A playlist of songs from different platforms."
 }
 */
+// CREATE playlist
 async function createPlaylist(playlist) {
     let sql = `
         INSERT INTO playlists(user_id, title, description)
@@ -44,6 +45,7 @@ async function createPlaylist(playlist) {
     return result;
 }
 
+// READ all playlists
 async function getAllPlaylists() {
     let sql = `
         SELECT * FROM playlists;
@@ -52,6 +54,7 @@ async function getAllPlaylists() {
     return await con.query(sql);
 }
 
+// READ one playlist by ID
 async function getPlaylistById(playlist_id) {
     let sql = `
         SELECT * FROM playlists
@@ -62,8 +65,43 @@ async function getPlaylistById(playlist_id) {
     return playlist[0];
 }
 
+/*
+{
+    title: "Updated Playlist Title",
+    description: "Updated playlist description."
+}
+*/
+// UPDATE playlist by ID
+async function updatePlaylist(playlist_id, playlist) {
+    let sql = `
+        UPDATE playlists
+        SET title = ?, description = ?
+        WHERE playlist_id = ?;
+    `;
+
+    await con.query(sql, [
+        playlist.title,
+        playlist.description,
+        playlist_id
+    ]);
+
+    return await getPlaylistById(playlist_id);
+}
+
+// DELETE playlist by ID
+async function deletePlaylist(playlist_id) {
+    let sql = `
+        DELETE FROM playlists
+        WHERE playlist_id = ?;
+    `;
+
+    return await con.query(sql, [playlist_id]);
+}
+
 module.exports = {
+    createPlaylist,
     getAllPlaylists,
     getPlaylistById,
-    createPlaylist
+    updatePlaylist,
+    deletePlaylist
 };
